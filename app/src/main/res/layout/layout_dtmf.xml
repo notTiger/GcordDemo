@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="540dp"
+    android:layout_height="476dp"
+    android:layout_marginBottom="349dp"
+    android:background="@drawable/shape_dtmf_bg"
+    android:visibility="gone"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    tools:showIn="@layout/activity_in_call">
+
+    <ImageView
+        android:id="@+id/dtmf1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/call_button_bg"
+        android:contentDescription="@string/app_name"
+        android:onClick="onDtmfClick"
+        android:src="@mipmap/dtmf_1"
+        android:tag="1"
+        app:layout_constraintBottom_toTopOf="@id/dtmf4"
+        app:layout_constraintEnd_toStartOf="@id/dtmf2"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <ImageView
+        android:id="@+id/dtmf2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/call_button_bg"
+        android:contentDescription="@string/app_name"
+        android:onClick="onDtmfClick"
+        android:src="@mipmap/dtmf_2"
+        android:tag="2"
+        app:layout_constraintEnd_toStartOf="@id/dtmf3"
+        app:layout_constraintStart_toEndOf="@id/dtmf1"
+        app:layout_constraintTop_toTopOf="@id/dtmf1" />
+
+    <ImageView
+        android:id="@+id/dtmf3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/call_button_bg"
+        android:contentDescription="@string/app_name"
+        android:onClick="onDtmfClick"
+        android:src="@mipmap/dtmf_3"
+        android:tag="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/dtmf2"
+        app:layout_constraintTop_toTopOf="@id/dtmf1" />
+
+    <ImageView
+        android:id="@+id/dtmf4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/call_button_bg"
+        android:contentDescription="@string/app_name"
+        android:onClick="onDtmfClick"
+        android:src="@mipmap/dtmf_4"
+        android:tag="4"
+        app:layout_constraintBottom_toTopOf="@id/dtmf7"
+        app:layout_constraintEnd_toStartOf="@id/dtmf5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dtmf1"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <ImageView
+        android:id="@+id/dtmf5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/call_button_bg"
+        android:contentDescription="@string/app_name"
+        android:onClick="onDtmfClick"
+        android:src="@mipmap/dtmf_5"
+        android:tag="5"
+        app:layout_constraintEnd_toStartOf="@id/dtmf6"
+        app:layout_constraintStart_toEndOf="@id/dtmf4"
+        app:layout_constraintTop_toTopOf="@id/dtmf4" />
+
+    <ImageView
+        android:id="@+id/dtmf6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/call_button_bg"
+        android:contentDescription="@string/app_name"
+        android:onClick="onDtmfClick"
+        android:src="@mipmap/dtmf_6"
+        android:tag="6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/dtmf5"
+        app:layout_constraintTop_toTopOf="@id/dtmf4" />
+
+    <ImageView
+        android:id="@+id/dtmf7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/call_button_bg"
+        android:contentDescription="@string/app_name"
+        android:onClick="onDtmfClick"
+        android:src="@mipmap/dtmf_7"
+        android:tag="7"
+        app:layout_constraintBottom_toTopOf="@id/dtmfStar"
+        app:layout_constraintEnd_toStartOf="@id/dtmf8"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dtmf4"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <ImageView
+        android:id="@+id/dtmf8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/call_button_bg"
+        android:contentDescription="@string/app_name"
+        android:onClick="onDtmfClick"
+        android:src="@mipmap/dtmf_8"
+        android:tag="8"
+        app:layout_constraintEnd_toStartOf="@id/dtmf9"
+        app:layout_constraintStart_toEndOf="@id/dtmf7"
+        app:layout_constraintTop_toTopOf="@id/dtmf7" />
+
+    <ImageView
+        android:id="@+id/dtmf9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/call_button_bg"
+        android:contentDescription="@string/app_name"
+        android:onClick="onDtmfClick"
+        android:src="@mipmap/dtmf_9"
+        android:tag="9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/dtmf8"
+        app:layout_constraintTop_toTopOf="@id/dtmf7" />
+
+    <ImageView
+        android:id="@+id/dtmfStar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/call_button_bg"
+        android:contentDescription="@string/app_name"
+        android:onClick="onDtmfClick"
+        android:src="@mipmap/dtmf_star"
+        android:tag="star"
+        app:layout_constraintBottom_toTopOf="@id/dtfmLine"
+        app:layout_constraintEnd_toStartOf="@id/dtmf0"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dtmf7"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <ImageView
+        android:id="@+id/dtmf0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/call_button_bg"
+        android:contentDescription="@string/app_name"
+        android:onClick="onDtmfClick"
+        android:src="@mipmap/dtmf_0"
+        android:tag="0"
+        app:layout_constraintEnd_toStartOf="@id/dtmfPound"
+        app:layout_constraintStart_toEndOf="@id/dtmfStar"
+        app:layout_constraintTop_toTopOf="@id/dtmfStar" />
+
+    <ImageView
+        android:id="@+id/dtmfPound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/call_button_bg"
+        android:contentDescription="@string/app_name"
+        android:onClick="onDtmfClick"
+        android:src="@mipmap/dtmf_pound"
+        android:tag="pound"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/dtmf0"
+        app:layout_constraintTop_toTopOf="@id/dtmfStar" />
+
+    <View
+        android:id="@+id/dtfmLine"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginBottom="70dp"
+        android:background="#FF97AEB8"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFlash"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:onClick="onFlashClick"
+        android:text="@string/flash"
+        android:textColor="#FF1A212A"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toStartOf="@id/verticalLine"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintHorizontal_weight="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dtfmLine" />
+
+    <View
+        android:id="@+id/verticalLine"
+        android:layout_width="1dp"
+        android:layout_height="70dp"
+        android:background="#FF97AEB8"
+        app:layout_constraintEnd_toStartOf="@id/tvDismiss"
+        app:layout_constraintStart_toEndOf="@id/tvFlash"
+        app:layout_constraintTop_toTopOf="@id/tvFlash" />
+
+    <TextView
+        android:id="@+id/tvDismiss"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:onClick="onDismissClick"
+        android:text="@string/dismiss"
+        android:textColor="#FF1A212A"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1.0"
+        app:layout_constraintStart_toEndOf="@id/verticalLine"
+        app:layout_constraintTop_toTopOf="@id/tvFlash" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

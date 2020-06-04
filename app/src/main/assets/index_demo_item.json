@@ -1,0 +1,14 @@
+[
+    {
+        "name": "电话",
+        "icon": "mipmap/icon_phone",
+        "description": "通话记录、拨号、联系人",
+        "id": 1
+    },
+    {
+        "name": "设置",
+        "icon": "mipmap/icon_setting",
+        "description": "系统设置、定制设置项",
+        "id": 2
+    }
+]

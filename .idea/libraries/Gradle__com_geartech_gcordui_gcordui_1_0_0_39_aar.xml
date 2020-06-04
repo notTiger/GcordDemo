@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.geartech.gcordui:gcordui:1.0.0.39@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b6661c12fc856f48f129fbbc1d77af57/jetified-gcordui-1.0.0.39/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b6661c12fc856f48f129fbbc1d77af57/jetified-gcordui-1.0.0.39/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

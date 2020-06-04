@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">GcordSDK开发Demo</string>
+    <string name="call_log">通话记录</string>
+    <string name="dial_pad">拨号盘</string>
+    <string name="contact">联系人</string>
+    <string name="hint">提示</string>
+    <string name="delete_hint">删除后不可恢复，是否确定删除？</string>
+    <string name="cancel">取消</string>
+    <string name="delete">删除</string>
+    <string name="unknown_number">未显示主叫号码</string>
+    <string name="playijng_record">播放录音</string>
+    <string name="time_string_format1">%1$02d:%2$02d/%3$02d:%4$02d</string>
+    <string name="time_string_format2">%1$02d:%2$02d:%3$02d/%4$02d:%5$02d:%6$02d</string>
+    <string name="save">保存</string>
+    <string name="family_name">姓</string>
+    <string name="given_name">名</string>
+    <string name="company">公司</string>
+    <string name="number">号码</string>
+    <string name="add_contact">新建联系人</string>
+    <string name="deleted">删除完成</string>
+    <string name="delete_failed">删除失败</string>
+    <string name="saved">保存成功</string>
+    <string name="save_failed">保存失败</string>
+    <string name="phone_number_is_empty">电话号码不能为空</string>
+    <string name="dialing">正在拨号</string>
+    <string name="end_call">挂断</string>
+    <string name="answer_call">answer call</string>
+    <string name="keyboard">键盘</string>
+    <string name="recording">录音</string>
+    <string name="mute">静音</string>
+    <string name="hands_free">免提</string>
+    <string name="flash">闪断</string>
+    <string name="dismiss">收起</string>
+    <string name="please_enter_flash_number">请输入闪断的号码</string>
+</resources>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".AddOrEditContactActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:text="@string/contact"
+        android:textColor="#FF1A212A"
+        android:textSize="26sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:padding="20dp"
+        android:text="@string/cancel"
+        android:textColor="@color/edit_contact_btn_cancel_text_color"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:enabled="false"
+        android:padding="20dp"
+        android:text="@string/save"
+        android:textColor="@color/edit_contact_btn_save_text_color"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvTitle" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#FFCCD3DC"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <EditText
+        android:id="@+id/etFamilyName"
+        android:layout_width="470dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="198dp"
+        android:layout_marginTop="60dp"
+        android:autofillHints=""
+        android:background="@android:color/transparent"
+        android:hint="@string/family_name"
+        android:inputType="text"
+        android:singleLine="true"
+        android:textColor="#FF1A212A"
+        android:textColorHint="#FF9AA6B6"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/line" />
+
+    <View
+        android:layout_width="470dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="#FFE9EDEE"
+        app:layout_constraintStart_toStartOf="@id/etFamilyName"
+        app:layout_constraintTop_toBottomOf="@id/etFamilyName" />
+
+    <EditText
+        android:id="@+id/etGivenName"
+        android:layout_width="470dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="66dp"
+        android:autofillHints=""
+        android:background="@android:color/transparent"
+        android:hint="@string/given_name"
+        android:inputType="text"
+        android:singleLine="true"
+        android:textColor="#FF1A212A"
+        android:textColorHint="#FF9AA6B6"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@id/etFamilyName"
+        app:layout_constraintTop_toBottomOf="@id/etFamilyName" />
+
+    <View
+        android:layout_width="470dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="#FFE9EDEE"
+        app:layout_constraintStart_toStartOf="@id/etGivenName"
+        app:layout_constraintTop_toBottomOf="@id/etGivenName" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:text="@string/company"
+        android:textColor="#FF1A212A"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/etCompany" />
+
+    <EditText
+        android:id="@+id/etCompany"
+        android:layout_width="470dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="66dp"
+        android:autofillHints=""
+        android:background="@android:color/transparent"
+        android:hint="@string/company"
+        android:inputType="text"
+        android:singleLine="true"
+        android:textColor="#FF1A212A"
+        android:textColorHint="#FF9AA6B6"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@id/etGivenName"
+        app:layout_constraintTop_toBottomOf="@id/etGivenName" />
+
+    <View
+        android:layout_width="470dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="#FFE9EDEE"
+        app:layout_constraintStart_toStartOf="@id/etCompany"
+        app:layout_constraintTop_toBottomOf="@id/etCompany" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:text="@string/number"
+        android:textColor="#FF1A212A"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/etNumber" />
+
+    <EditText
+        android:id="@+id/etNumber"
+        android:layout_width="470dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="66dp"
+        android:autofillHints=""
+        android:background="@android:color/transparent"
+        android:hint="@string/number"
+        android:inputType="phone"
+        android:singleLine="true"
+        android:textColor="#FF1A212A"
+        android:textColorHint="#FF9AA6B6"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@id/etCompany"
+        app:layout_constraintTop_toBottomOf="@id/etCompany" />
+
+    <View
+        android:layout_width="470dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="#FFE9EDEE"
+        app:layout_constraintStart_toStartOf="@id/etNumber"
+        app:layout_constraintTop_toBottomOf="@id/etNumber" />
+</androidx.constraintlayout.widget.ConstraintLayout>

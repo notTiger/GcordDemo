@@ -1,0 +1,17 @@
+[
+  {
+    "name": "定制设置项",
+    "description": "只显示部分设置项",
+    "id": 1
+  },
+  {
+    "name": "隐藏部分设置项",
+    "description": "系统设置、定制设置项",
+    "id": 2
+  },
+  {
+    "name": "添加设置项",
+    "description": "添加额外的设置项（详见AndroidManifest.xml文件）",
+    "id": 3
+  }
+]

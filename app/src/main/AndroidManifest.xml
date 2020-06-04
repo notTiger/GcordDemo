@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.gcorddemo">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:name=".application.DemoApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".AddOrEditContactActivity"></activity>
+        <activity android:name=".InCallActivity" />
+        <activity android:name=".SettingDemoActivity" />
+        <activity android:name=".PhoneDemoActivity">
+            <intent-filter>
+                <action android:name="com.example.gcrodemo.phoneDemo" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- 如果希望拦截系统来电，打开这个声明 -->
+        <receiver
+            android:name="cn.com.geartech.gcordsdk.IncomingCallReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.com.geartech.gcordsdk.intercept_incoming_call" />
+                <action android:name="cn.com.geartech.gcordsdk.intercept_cell_incoming_call" />
+                <action android:name="cn.com.geartech.gcordsdk.intercept_cell_outgoing_call" />
+            </intent-filter>
+        </receiver> <!-- 如果希望app自动保活，打开此声明 -->
+        <meta-data
+            android:name="cn.com.geartech.gtplatform.metadata_need_keep_alive"
+            android:value="default" /> <!-- 如果希望按话机免提键跳转到自己的app，打开这个声明 -->
+        <meta-data
+            android:name="cn.com.geartech.gcordsdk.default_home_app"
+            android:value="default" /> <!-- 如果不希望打开app的时候显示底部导航栏，打开此声明 -->
+        <meta-data
+            android:name="cn.com.geartech.gcordsdk.no_navigation_bar_when_launched"
+            android:value="default" /> <!-- 如果希望在系统的通话界面以及通话记录中使用自定义的通讯录来匹配名字，打开此声明并且实现ContactManager中的回调 -->
+        <!-- <meta-data android:name="cn.com.geartech.gcordsdk.meta_data_contact_data_provider" android:value="default"/> -->
+        <!-- 如果希望在软件开机的时候启动，加入这个meta-data -->
+        <meta-data
+            android:name="cn.com.geartech.gcordsdk.meta_data_auto_start_at_boot"
+            android:value="afterlauncher" /> <!-- 禁止后拨号的方式，即直接提起手柄不执行PSTN提机的动作。现在的用户都习惯手机式的拨号操作，不建议做成传统固话的操作方式 -->
+        <meta-data
+            android:name="gcord_meta_data_disable_post_dial"
+            android:value="default" /> <!-- 自定义桌面快捷键 -->
+        <!-- <meta-data -->
+        <!-- android:name="phone_button_customize" -->
+        <!-- android:value="{&apos;name&apos;:&apos;自定义button&apos;,&apos;icon&apos;:&apos;mipmap/ic_launcher&apos;, &apos;action&apos;:&apos;cn.com.geartech.action_other_dial_activity&apos;}" /> -->
+        <!-- 增加设置项,其中的action选项请根据实际情况配置 -->
+        <meta-data
+            android:name="custom_settings"
+            android:value="[{&apos;name&apos;:&apos;中旅&apos;,&apos;icon&apos;:&apos;mipmap/ic_launcher&apos;,&apos;group&apos;:&apos;旅行社&apos;,&apos;action&apos;:&apos;com.example.gcrodemo.phoneDemo&apos;,&apos;param&apos;:{&apos;abc&apos;:&apos;123&apos;,&apos;def&apos;:&apos;456&apos;}}]" />
+
+        <!--拦截sip通话-->
+        <meta-data
+            android:name="cn.com.geartech.sip_operation"
+            android:value="custom" />
+    </application>
+
+</manifest>
