@@ -71,7 +71,6 @@ public class RecordPlayingDialogFragment extends BaseDialogFragment {
             }
             v.setSelected(!isSelected);
         });
-        initMediaPlayer();
     }
 
     private void startTicking() {
@@ -124,6 +123,8 @@ public class RecordPlayingDialogFragment extends BaseDialogFragment {
         if (mediaPlayer != null) {
             if (mediaPlayer.isPlaying()) mediaPlayer.stop();
             mediaPlayer.reset();
+            mediaPlayer.release();
+            mediaPlayer = null;
         }
         dialogRecordPlayingBinding.ivPauseOrPlay.setSelected(false);
         isPlaying = false;
@@ -169,12 +170,13 @@ public class RecordPlayingDialogFragment extends BaseDialogFragment {
     }
 
     private void startPlaying() {
-        if (mediaPlayer != null) {
-            mediaPlayer.start();
-            isPlaying = true;
-            startTicking();
-            dialogRecordPlayingBinding.ivPauseOrPlay.setSelected(true);
+        if (mediaPlayer == null) {
+            initMediaPlayer();
         }
+        mediaPlayer.start();
+        isPlaying = true;
+        startTicking();
+        dialogRecordPlayingBinding.ivPauseOrPlay.setSelected(true);
     }
 
     @Override

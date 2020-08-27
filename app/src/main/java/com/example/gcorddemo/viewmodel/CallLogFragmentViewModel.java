@@ -24,12 +24,12 @@ public class CallLogFragmentViewModel extends BaseViewModel {
 
             @Override
             public void onCallLogUpdated(List<CallLogItem> callLogs) {
-//                callLogLiveData.postValue(callLogs != null ? callLogs : new ArrayList<>());
 //                synchronized (callLogItems) {
 //                    callLogItems.clear();
 //                    if (callLogs != null && callLogs.size() > 0)
 //                        callLogItems.addAll(callLogs);
 //                }
+//                callLogLiveData.postValue(callLogItems);
             }
 
             @Override

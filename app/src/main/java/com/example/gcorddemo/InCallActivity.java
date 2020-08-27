@@ -104,7 +104,7 @@ public class InCallActivity extends BaseActivity implements HandleManager.Handle
         initCallRelatedVars();
         GcordSDK.getInstance().getHandleManager().addHandleEventListener(this);
         getVarsFromIntent();
-        inCallActivityViewModel.getContactLiveData().observe(this, this::onContactFound);
+        inCallActivityViewModel.getContactLiveData().observe(InCallActivity.this, this::onContactFound);
     }
 
     private void onContactFound(ContactBean contactBean) {
@@ -408,7 +408,7 @@ public class InCallActivity extends BaseActivity implements HandleManager.Handle
 
     public void onRecordClick(View view) {
         if (!unifiedPhoneController.isRecording()) {
-            unifiedPhoneController.startRecording(new UnifiedPhoneController.UnifiedPhoneRecordCallback() {
+            unifiedPhoneController.startRecordingMp3(new UnifiedPhoneController.UnifiedPhoneRecordCallback() {
                 @Override
                 public void onRecordSuccess(String s) {
                     CallModel.debug("onRecordSuccess, record file path is " + s);
